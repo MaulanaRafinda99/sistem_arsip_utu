@@ -19,7 +19,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-
+    <link rel="shortcut icon" href="assets/img/logo/logo_utu.png" />
     <title>SA - UTU</title>
 </head>
 
