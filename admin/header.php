@@ -47,8 +47,8 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="../assets/img/logo/Logo SA.png" alt="" style="width: 80%;" /></a>
-                <strong><a href="index.html"><img src="../assets/img/logo/Logo SA.png" alt="" /></a></strong>
+                <a href="index.php"><img class="main-logo" src="../assets/img/logo/Logo SA.png" alt="" style="width: 80%;" /></a>
+                <strong><a href="index.php"><img src="../assets/img/logo/Logo SA.png" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
 
@@ -63,7 +63,7 @@
                         </li>
 
                         <li>
-                            <a href="kategori.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Kategori</span></a>
+                            <a href="admin.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Admin</span></a>
                         </li>
 
                         <li>
@@ -75,11 +75,11 @@
                         </li>
 
                         <li>
-                            <a href="admin.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Admin</span></a>
+                            <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
                         </li>
 
                         <li>
-                            <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
+                            <a href="kategori.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Kategori</span></a>
                         </li>
 
                         <li>
