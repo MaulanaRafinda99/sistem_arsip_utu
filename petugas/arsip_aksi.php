@@ -16,7 +16,7 @@ $jenis = pathinfo($filename, PATHINFO_EXTENSION);
 $kategori = $_POST['kategori'];
 $keterangan = $_POST['keterangan'];
 
-if($jenis == "php") {
+if($jenis != "pdf") {
 	header("location:arsip.php?alert=gagal");
 }else{
 	move_uploaded_file($_FILES['file']['tmp_name'], '../arsip/'.$rand.'_'.$filename);

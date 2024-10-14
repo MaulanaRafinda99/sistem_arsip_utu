@@ -75,6 +75,10 @@
                         </li>
 
                         <li>
+                            <a href="admin.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Admin</span></a>
+                        </li>
+
+                        <li>
                             <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
                         </li>
 
