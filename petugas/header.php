@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../assets/img/logo/logo_utu.png"/>
+    <link rel="shortcut icon" href="../assets/img/logo/logo_utu.png" />
     <title>Operator - Sistem Informasi Arsip Digital</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="../assets/img/logo/Logo SA.png" alt="" /></a>
+                        <a href="index.php"><img class="main-logo" src="../assets/img/logo/Logo SA.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -201,20 +201,13 @@
                                                 <span class="mini-click-non">Dashboard</span>
                                             </a>
                                         </li>
+
+                                        <li>
+                                            <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
+                                        </li>
+
                                         <li>
                                             <a href="kategori.php" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Kategori</span></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="petugas.php" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Operator</span></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="user.php" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">User</span></a>
-                                        </li>
-
-                                        <li>
-                                            <a href="riwayat.php" aria-expanded="false"><span class="educate-icon educate-form icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">User</span></a>
                                         </li>
 
                                         <li>

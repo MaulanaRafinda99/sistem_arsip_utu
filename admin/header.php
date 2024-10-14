@@ -107,7 +107,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="../assets/img/logo//Logo SA.png" alt="" /></a>
+                        <a href="index.php"><img class="main-logo" src="../assets/img/logo//Logo SA.png" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@
                                                                             <p>
                                                                                 <small><i><?php echo date('H:i:s  d-m-Y', strtotime($p['riwayat_waktu'])) ?></i></small>
                                                                                 <br>
-                                                                                <b><?php echo $p['user_nama'] ?></b> menunduh <b><?php echo $p['arsip_nama'] ?></b>.
+                                                                                <b><?php echo $p['user_nama'] ?></b> mengunduh <b><?php echo $p['arsip_nama'] ?></b>.
                                                                             </p>
                                                                         </div>
                                                                     </a>
@@ -215,19 +215,24 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="kategori.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Kategori</span></a>
+                                            <a href="admin.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Admin</span></a>
                                         </li>
-
+                                        
                                         <li>
                                             <a href="petugas.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Operator</span></a>
                                         </li>
 
+                                        
                                         <li>
                                             <a href="user.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data User</span></a>
                                         </li>
 
                                         <li>
                                             <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
+                                        </li>
+
+                                        <li>
+                                            <a href="kategori.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Kategori</span></a>
                                         </li>
 
                                         <li>

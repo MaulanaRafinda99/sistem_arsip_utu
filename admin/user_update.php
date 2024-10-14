@@ -4,7 +4,7 @@ $id  = $_POST['id'];
 $nama  = $_POST['nama'];
 $username = $_POST['username'];
 $pwd = $_POST['password'];
-$password = md5($_POST['password']);
+$password = $_POST['password'];
 
 // cek gambar
 $rand = rand();
