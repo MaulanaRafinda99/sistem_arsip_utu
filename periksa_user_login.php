@@ -4,7 +4,7 @@ include 'koneksi.php';
 
 // menangkap data yang dikirim dari form
 $username = $_POST['username'];
-$password = md5($_POST['password']);
+$password = $_POST['password'];
 
 $login = mysqli_query($koneksi, "SELECT * FROM user WHERE user_username='$username' AND user_password='$password'");
 $cek = mysqli_num_rows($login);
