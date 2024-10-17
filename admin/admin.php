@@ -89,21 +89,44 @@
                             </td>
                             <td><?php echo $p['admin_nama'] ?></td>
                             <td><?php echo $p['admin_username'] ?></td>
+
+                            <!--Modal konfirmasi hapus admin  -->
                             <td class="text-center">
-                                <div class="btn-group">
-                                    <a href="admin_edit.php?id=<?php echo $p['admin_id']; ?>" class="btn btn-default"><i class="fa fa-wrench"></i></a>
-                                    <a href="admin_hapus.php?id=<?php echo $p['admin_id']; ?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                <div class="modal fade" id="exampleModal_<?php echo $p['admin_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">PERINGATAN!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Apakah anda yakin ingin menghapus data admin ini?<br>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+                                                <a href="admin_hapus.php?id=<?php echo $p['admin_id']; ?>" class="btn btn-danger" style="color:#fff">Ya. Hapus <i class="fa fa-exclamation"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <a href="admin_edit.php?id=<?php echo $p['admin_id']; ?>" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal_<?php echo $p['admin_id']; ?>">
+                                    <i class="fa fa-trash"></i>
+                                </button>
                             </td>
+
+
                         </tr>
                     <?php
                     }
                     ?>
                 </tbody>
             </table>
-
-
         </div>
+
 
     </div>
 </div>

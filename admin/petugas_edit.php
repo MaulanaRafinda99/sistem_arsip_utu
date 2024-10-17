@@ -53,24 +53,24 @@
                             <div class="form-group">
                                 <label>Nama</label>
                                 <input type="hidden" name="id" value="<?php echo $d['petugas_id']; ?>">
-                                <input type="text" class="form-control" name="nama" required="required" value="<?php echo $d['petugas_nama']; ?>">
+                                <input type="text" class="form-control" name="nama" required="required" value="<?php echo $d['petugas_nama']; ?>" placeholder="Nama">
                             </div>
 
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" class="form-control" name="username" required="required" value="<?php echo $d['petugas_username']; ?>">
+                                <input type="text" class="form-control" name="username" required="required" value="<?php echo $d['petugas_username']; ?>" placeholder="Username">
                             </div>
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="password">
-                                <small>Kosongkan jika tidak ingin mengubah password.</small>
+                                <input type="password" class="form-control" name="password" placeholder="(tidak diubah)">
+                                <small style="color: red;">*Kosongkan jika tidak ingin mengubah password.</small>
                             </div>
 
                             <div class="form-group">
                                 <label>Foto</label>
                                 <input type="file" name="foto">
-                                <small>Kosongkan jika tidak ingin mengubah foto.</small>
+                                <small style="color: red;">*Kosongkan jika tidak ingin mengubah foto.</small>
                             </div>
 
                             <div class="form-group">

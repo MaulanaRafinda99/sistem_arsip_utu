@@ -51,37 +51,58 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
+                    <?php
                     include '../koneksi.php';
                     $no = 1;
-                    $petugas = mysqli_query($koneksi,"SELECT * FROM petugas ORDER BY petugas_id DESC");
-                    while($p = mysqli_fetch_array($petugas)){
-                        ?>
+                    $petugas = mysqli_query($koneksi, "SELECT * FROM petugas ORDER BY petugas_id DESC");
+                    while ($p = mysqli_fetch_array($petugas)) {
+                    ?>
                         <tr>
                             <td><?php echo $no++; ?></td>
                             <td>
-                                <?php 
-                                if($p['petugas_foto'] == ""){
-                                    ?>
+                                <?php
+                                if ($p['petugas_foto'] == "") {
+                                ?>
                                     <img class="img-user" src="../gambar/sistem/user.png">
-                                    <?php
-                                }else{
-                                    ?>
+                                <?php
+                                } else {
+                                ?>
                                     <img class="img-user" src="../gambar/petugas/<?php echo $p['petugas_foto']; ?>">
-                                    <?php
+                                <?php
                                 }
                                 ?>
                             </td>
                             <td><?php echo $p['petugas_nama'] ?></td>
                             <td><?php echo $p['petugas_username'] ?></td>
                             <td class="text-center">
-                                <div class="btn-group">
-                                    <a href="petugas_edit.php?id=<?php echo $p['petugas_id']; ?>" class="btn btn-default"><i class="fa fa-wrench"></i></a>
-                                    <a href="petugas_hapus.php?id=<?php echo $p['petugas_id']; ?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+
+                                <!-- Modal Hapus Operator -->
+                                <div class="modal fade" id="exampleModal_<?php echo $p['petugas_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">PERINGATAN!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Apakah anda yakin ingin menghapus data operator ini?<br>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+                                                <a href="petugas_hapus.php?id=<?php echo $p['petugas_id']; ?>" class="btn btn-danger" style="color:#fff">Ya. Hapus <i class="fa fa-exclamation"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <a href="petugas_edit.php?id=<?php echo $p['petugas_id']; ?>" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal_<?php echo $p['petugas_id']; ?>">
+                                    <i class="fa fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
-                        <?php 
+                    <?php
                     }
                     ?>
                 </tbody>

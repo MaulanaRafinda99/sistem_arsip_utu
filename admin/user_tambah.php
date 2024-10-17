@@ -45,17 +45,17 @@
 
                         <div class="form-group">
                             <label>Nama</label>
-                            <input type="text" class="form-control" name="nama" required="required">
+                            <input type="text" class="form-control" name="nama" required="required" placeholder="Nama">
                         </div>
 
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" class="form-control" name="username" required="required">
+                            <input type="text" class="form-control" name="username" required="required" placeholder="Username">
                         </div>
 
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" name="password" required="required">
+                            <input type="password" class="form-control" name="password" required="required" placeholder="Password">
                         </div>
 
                         <div class="form-group">

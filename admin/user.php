@@ -50,46 +50,65 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php 
+                    <?php
                     include '../koneksi.php';
                     $no = 1;
-                    $user = mysqli_query($koneksi,"SELECT * FROM user ORDER BY user_id DESC");
-                    while($p = mysqli_fetch_array($user)){
-                        ?>
+                    $user = mysqli_query($koneksi, "SELECT * FROM user ORDER BY user_id DESC");
+                    while ($p = mysqli_fetch_array($user)) {
+                    ?>
                         <tr>
                             <td><?php echo $no++; ?></td>
                             <td>
-                                <?php 
-                                if($p['user_foto'] == ""){
-                                    ?>
+                                <?php
+                                if ($p['user_foto'] == "") {
+                                ?>
                                     <img class="img-user" src="../gambar/sistem/user.png">
-                                    <?php
-                                }else{
-                                    ?>
+                                <?php
+                                } else {
+                                ?>
                                     <img class="img-user" src="../gambar/user/<?php echo $p['user_foto']; ?>">
-                                    <?php
+                                <?php
                                 }
                                 ?>
                             </td>
                             <td><?php echo $p['user_nama'] ?></td>
                             <td><?php echo $p['user_username'] ?></td>
                             <td class="text-center">
-                                <div class="btn-group">
-                                    <a href="user_edit.php?id=<?php echo $p['user_id']; ?>" class="btn btn-default"><i class="fa fa-wrench"></i></a>
-                                    <a href="user_hapus.php?id=<?php echo $p['user_id']; ?>" class="btn btn-default"><i class="fa fa-trash"></i></a>
+                                <div class="modal fade" id="exampleModal_<?php echo $p['user_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">PERINGATAN!</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Apakah anda yakin ingin menghapus data user ini?<br>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
+                                                <a href="user_hapus.php?id=<?php echo $p['user_id']; ?>" class="btn btn-danger" style="color:#fff">Ya, Hapus  <i class="fa fa-exclamation"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </td>
-                        </tr>
-                        <?php 
-                    }
-                    ?>
-                </tbody>
-            </table>
-
-
+                                <a href="user_edit.php?id=<?php echo $p['user_id']; ?>" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal_<?php echo $p['user_id']; ?>">
+                                    <i class="fa fa-trash"></i>
         </div>
+        </td>
+        </tr>
+    <?php
+                    }
+    ?>
+    </tbody>
+    </table>
+
 
     </div>
+
+</div>
 </div>
 
 

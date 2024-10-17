@@ -53,12 +53,12 @@
                             <div class="form-group">
                                 <label>Nama</label>
                                 <input type="hidden" name="id" value="<?php echo $d['admin_id']; ?>">
-                                <input type="text" class="form-control" name="nama" required="required" value="<?php echo $d['admin_nama']; ?>">
+                                <input type="text" class="form-control" name="nama" required="required" placeholder="Nama" value="<?php echo $d['admin_nama']; ?>">
                             </div>
 
                             <div class="form-group">
                                 <label>Username</label>
-                                <input type="text" class="form-control" name="username" required="required" value="<?php echo $d['admin_username']; ?>">
+                                <input type="text" class="form-control" name="username" required="required" placeholder="Username" value="<?php echo $d['admin_username']; ?>">
                             </div>
 
                             <div class="form-group">

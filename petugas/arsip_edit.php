@@ -55,12 +55,12 @@
                             <div class="form-group">
                                 <label>Kode Arsip</label>
                                   <input type="hidden" name="id" value="<?php echo $d['arsip_id']; ?>">
-                                <input type="text" class="form-control" name="kode" required="required" value="<?php echo $d['arsip_kode']; ?>">
+                                <input type="text" class="form-control" name="kode" required="required" value="<?php echo $d['arsip_kode']; ?>" placeholder="Kode Arsip">
                             </div>
 
                             <div class="form-group">
                                 <label>Nama Arsip</label>
-                                <input type="text" class="form-control" name="nama" required="required" value="<?php echo $d['arsip_nama']; ?>">
+                                <input type="text" class="form-control" name="nama" required="required" value="<?php echo $d['arsip_nama']; ?>" placeholder="Nama Arsip">
                             </div>
 
                             <div class="form-group">
@@ -80,13 +80,13 @@
 
                             <div class="form-group">
                                 <label>Keterangan</label>
-                                <textarea class="form-control" name="keterangan" required="required"><?php echo $d['arsip_keterangan']; ?></textarea>
+                                <textarea class="form-control" name="keterangan" required="required" placeholder="Keterangan"><?php echo $d['arsip_keterangan']; ?></textarea>
                             </div>
 
                             <div class="form-group">
                                 <label>File</label>
                                 <input type="file" name="file">
-                                <small>Kosongkan jika tidak ingin mengubah file</small>
+                                <small style="color: red;">*Kosongkan jika tidak ingin mengubah file.</small>
                             </div>
 
                             <div class="form-group">

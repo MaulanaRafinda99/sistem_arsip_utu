@@ -52,7 +52,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" style="margin-top: 7px;">
                         <br>
                         <input type="submit" class="btn btn-primary" value="Tampilkan">
                     </div>
@@ -112,11 +112,8 @@
                             <td><?php echo $p['petugas_nama'] ?></td>
                             <td><?php echo $p['arsip_keterangan'] ?></td>
                             <td class="text-center">
-                                <div class="btn-group">
-                                    <!-- <a target="_blank" class="btn btn-default" href="../arsip/<?php echo $p['arsip_file']; ?>"><i class="fa fa-download"></i></a> -->
-                                    <a target="_blank" class="btn btn-default" href="arsip_download.php?id=<?php echo $p['arsip_id']; ?>"><i class="fa fa-download"></i></a>
+                                    <a target="_blank" class="btn btn-primary" href="arsip_download.php?id=<?php echo $p['arsip_id']; ?>"><i class="fa fa-download"></i></a>
                                     <a target="_blank" href="arsip_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i> Preview</a>
-                                </div>
                             </td>
                         </tr>
                         <?php 

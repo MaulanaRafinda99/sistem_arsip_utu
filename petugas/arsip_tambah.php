@@ -47,12 +47,12 @@
 
                         <div class="form-group">
                             <label>Kode Arsip</label>
-                            <input type="text" class="form-control" name="kode" required="required">
+                            <input type="text" class="form-control" name="kode" required="required" placeholder="Kode Arsip">
                         </div>
 
                         <div class="form-group">
                             <label>Nama Arsip</label>
-                            <input type="text" class="form-control" name="nama" required="required">
+                            <input type="text" class="form-control" name="nama" required="required" placeholder="Nama Dokumen Arsip">
                         </div>
 
                         <div class="form-group">
@@ -72,7 +72,7 @@
 
                         <div class="form-group">
                             <label>Keterangan</label>
-                            <textarea class="form-control" name="keterangan" required="required"></textarea>
+                            <textarea class="form-control" name="keterangan" required="required" placeholder="-"></textarea>
                         </div>
 
                         <div class="form-group">
