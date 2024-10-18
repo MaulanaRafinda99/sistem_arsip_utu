@@ -13,8 +13,8 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <ul class="breadcome-menu" style="padding-top: 0px">
-                                <li><a href="#">Home</a> <span class="bread-slash">/</span></li>
-                                <li><span class="bread-blod">Arsip</span></li>
+                                <li><a href="index.php">Home</a> <span class="bread-slash">/</span></li>
+                                <li><span class="bread-blod">Edit Arsip Saya</span></li>
                             </ul>
                         </div>
                     </div>
@@ -32,12 +32,12 @@
             <div class="panel panel">
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">Edit Arsip</h3>
+                    <h3 class="panel-title">Edit Arsip Saya</h3>
                 </div>
                 <div class="panel-body">
 
                     <div class="pull-right">            
-                        <a href="arsip.php" class="btn btn-sm btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
+                        <a href="arsip_saya.php" class="btn btn-sm btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
                     </div>
 
                     <br>

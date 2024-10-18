@@ -28,7 +28,7 @@
     <div class="panel panel">
 
         <div class="panel-heading">
-            <h3 class="panel-title">Semua Arsip</h3>
+            <h3 class="panel-title">Data Semua Arsip</h3>
         </div>
         <div class="panel-body">
 
@@ -48,7 +48,7 @@
                     <?php
                     include '../koneksi.php';
                     $no = 1;
-                    $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_petugas=petugas_id and arsip_kategori=kategori_id ORDER BY arsip_id DESC");
+                    $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_kategori=kategori_id AND arsip_petugas = petugas_id AND arsip_status IS NULL ORDER BY arsip_id DESC");
                     while ($p = mysqli_fetch_array($arsip)) {
                     ?>
                         <tr>
@@ -91,7 +91,7 @@
 
 
                                 <a target="_blank" class="btn btn-primary" href="../arsip/<?php echo $p['arsip_file']; ?>"><i class="fa fa-download"></i></a>
-                                <a target="_blank" href="arsip_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i> Preview</a>
+                                <a target="" href="arsip_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i> Preview</a>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal_<?php echo $p['arsip_id']; ?>">
                                     <i class="fa fa-trash"></i>
                                 </button>

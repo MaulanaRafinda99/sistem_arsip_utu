@@ -32,11 +32,11 @@
             <div class="panel panel">
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">Preview Arsip</h3>
+                    <h3 class="panel-title">Preview Arsip Saya</h3>
                 </div>
                 <div class="panel-body">
 
-                    <a href="arsip.php" class="btn btn-sm btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
+                    <a href="arsip_saya.php" class="btn btn-sm btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
 
                     <br>
                     <br>
@@ -44,7 +44,7 @@
                     <?php
                     $id = $_GET['id'];
                     $id_operator = $_SESSION['id'];
-                    $data = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_petugas = petugas_id and arsip_kategori=kategori_id and arsip_id='$id'");
+                    $data = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE petugas_id=$id_operator and arsip_kategori=kategori_id and arsip_id='$id'");
                     while ($d = mysqli_fetch_array($data)) {
                     ?>
 

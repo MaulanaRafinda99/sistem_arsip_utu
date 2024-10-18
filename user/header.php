@@ -52,30 +52,70 @@
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
 
-                <nav class="sidebar-nav left-sidebar-menu-pro" style="margin-top: 30px">
+                <?php
+                $currentPage = basename($_SERVER['PHP_SELF']); // Mendapatkan nama file saat ini
+                ?>
 
+                <nav class="sidebar-nav left-sidebar-menu-pro" style="margin-top: 30px">
                     <ul class="metismenu" id="menu1">
-                        <li class="active">
+                        <li class="<?= $currentPage == 'index.php' ? 'active' : '' ?>">
                             <a href="index.php">
                                 <span class="educate-icon educate-home icon-wrap"></span>
                                 <span class="mini-click-non">Dashboard</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
+                        <li class="<?= $currentPage == 'arsip.php' ? 'active' : '' ?> <?= $currentPage == 'arsip_preview.php' ? 'active' : '' ?>">
+                            <a href="arsip.php" aria-expanded="false">
+                                <span class="educate-icon educate-data-table icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Data Arsip</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="gantipassword.php" aria-expanded="false"><span class="educate-icon educate-danger icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Ganti Password</span></a>
+                        <li class="<?= $currentPage == 'gantipassword.php' ? 'active' : '' ?>">
+                            <a href="gantipassword.php" aria-expanded="false">
+                                <span class="educate-icon educate-danger icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Ganti Password</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="logout.php" aria-expanded="false"><span class="educate-icon educate-pages icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Logout</span></a>
+                        <li class="<?= $currentPage == 'logout.php' ? 'active' : '' ?>">
+                            <a href="logout.php" aria-expanded="false">
+                                <span class="educate-icon educate-pages icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Logout</span>
+                            </a>
                         </li>
-
                     </ul>
                 </nav>
+
+                <style>
+                    .sidebar-nav .metismenu li.active a {
+                        background-color: #007bff;
+                        color: white;
+                        border-radius: 5px;
+                    }
+
+                    .sidebar-nav .metismenu li.active a .icon-wrap {
+                        color: white;
+                    }
+
+                    .sidebar-nav .metismenu li a {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 15px;
+                        color: #333;
+                        text-decoration: none;
+                        background-color: transparent;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease, color 0.3s ease;
+                    }
+
+                    .sidebar-nav .metismenu li a:hover {
+                        background-color: #f0f0f0;
+                        color: #007bff;
+                    }
+                </style>
+
             </div>
         </nav>
     </div>

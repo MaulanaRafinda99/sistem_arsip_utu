@@ -63,14 +63,14 @@
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="password">
-                                <small>Kosongkan jika tidak ingin mengubah password.</small>
+                                <input type="password" class="form-control" name="password" placeholder="(tidak diubah)">
+                                <small style="color: red;">*Kosongkan jika tidak ingin mengubah password.</small>
                             </div>
 
                             <div class="form-group">
                                 <label>Foto</label>
                                 <input type="file" name="foto">
-                                <small>Kosongkan jika tidak ingin mengubah foto.</small>
+                                <small style="color: red;">*Kosongkan jika tidak ingin mengubah foto.</small>
                             </div>
 
                             <div class="form-group">

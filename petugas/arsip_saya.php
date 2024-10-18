@@ -8,13 +8,13 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <div class="breadcome-heading">
-                                <h4 style="margin-bottom: 0px">Data Arsip</h4>
+                                <h4 style="margin-bottom: 0px">Data Arsip Saya</h4>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <ul class="breadcome-menu" style="padding-top: 0px">
-                                <li><a href="#">Home</a> <span class="bread-slash">/</span></li>
-                                <li><span class="bread-blod">Arsip</span></li>
+                                <li><a href="index.php">Home</a> <span class="bread-slash">/</span></li>
+                                <li><a href="arsip_saya.php">Arsip Saya</a><span class="bread-blod"></span></li>
                             </ul>
                         </div>
                     </div>
@@ -28,10 +28,17 @@
     <div class="panel panel">
 
         <div class="panel-heading">
-            <h3 class="panel-title">Data Arsip Semua</h3>
+            <h3 class="panel-title">Data Arsip Saya</h3>
         </div>
-        <div class="panel-body">    
+        <div class="panel-body">
 
+
+            <div class="pull-right">
+                <a href="arsip_tambah.php" class="btn btn-primary"><i class="fa fa-cloud"></i> Upload Arsip</a>
+            </div>
+
+            <br>
+            <br>
             <br>
 
             <center>
@@ -56,7 +63,6 @@
                         <th>Waktu Upload</th>
                         <th>Arsip</th>
                         <th>Kategori</th>
-                        <th>Operator</th>
                         <th>Keterangan</th>
                         <th class="text-center" width="20%">OPSI</th>
                     </tr>
@@ -66,7 +72,8 @@
                     include '../koneksi.php';
                     $no = 1;
                     $saya = $_SESSION['id'];
-                    $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_kategori=kategori_id AND arsip_petugas = petugas_id ORDER BY arsip_id DESC");
+
+                    $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori WHERE arsip_petugas = $saya AND arsip_kategori = kategori_id AND arsip_status IS NULL ORDER BY arsip_id DESC");
                     while ($p = mysqli_fetch_array($arsip)) {
                     ?>
                         <tr>
@@ -80,7 +87,6 @@
 
                             </td>
                             <td><?php echo $p['kategori_nama'] ?></td>
-                            <td><?php echo $p['petugas_nama'] ?></td>
                             <td><?php echo $p['arsip_keterangan'] ?></td>
                             <td class="text-center">
 
@@ -107,9 +113,12 @@
                                 </div>
 
 
-                                    <a target="_blank" class="btn btn-primary" href="../arsip/<?php echo $p['arsip_file']; ?>"><i class="fa fa-download"></i></a>
-                                    <a href="arsip_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i>Preview</a>
-                                   
+                                <a target="_blank" class="btn btn-primary" href="../arsip/<?php echo $p['arsip_file']; ?>"><i class="fa fa-download"></i></a>
+                                <a href="arsip_saya_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i>Preview</a>
+                                <a href="arsip_edit.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal_<?php echo $p['arsip_id']; ?>">
+                                    <i class="fa fa-trash"></i>
+                                </button>
                             </td>
                         </tr>
                     <?php
@@ -119,9 +128,9 @@
             </table>
 
             <style>
-                th {
-                    text-align: center;
-                }
+               th {
+                text-align: center;
+               }
             </style>
 
 

@@ -52,51 +52,107 @@
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
 
-                <nav class="sidebar-nav left-sidebar-menu-pro" style="margin-top: 30px">
+                <?php
+                $currentPage = basename($_SERVER['PHP_SELF']);
+                ?>
 
+                <nav class="sidebar-nav left-sidebar-menu-pro" style="margin-top: 30px">
                     <ul class="metismenu" id="menu1">
-                        <li class="active">
+                        <li class="<?= $currentPage == 'index.php' ? 'active' : '' ?>">
                             <a href="index.php">
                                 <span class="educate-icon educate-home icon-wrap"></span>
                                 <span class="mini-click-non">Dashboard</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="admin.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Admin</span></a>
+                        <li class="<?= $currentPage == 'admin.php' ? 'active' : '' ?> <?= $currentPage == 'admin_edit.php' ? 'active' : '' ?> <?= $currentPage == 'admin_tambah.php' ? 'active' : '' ?>">
+                            <a href="admin.php" aria-expanded="false">
+                                <span class="educate-icon educate-professor icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Data Admin</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="petugas.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Operator</span></a>
+                        <li class="<?= $currentPage == 'petugas.php' ? 'active' : '' ?> <?= $currentPage == 'petugas_edit.php' ? 'active' : '' ?> <?= $currentPage == 'petugas_tambah.php' ? 'active' : '' ?>">
+                            <a href="petugas.php" aria-expanded="false">
+                                <span class="educate-icon educate-professor icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Data Operator</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="user.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data User</span></a>
+                        <li class="<?= $currentPage == 'user.php' ? 'active' : '' ?> <?= $currentPage == 'user_edit.php' ? 'active' : '' ?> <?= $currentPage == 'user_tambah.php' ? 'active' : '' ?>">
+                            <a href="user.php" aria-expanded="false">
+                                <span class="educate-icon educate-professor icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Data User</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
+                        <li class="<?= $currentPage == 'arsip.php' ? 'active' : '' ?> <?= $currentPage == 'arsip_preview.php' ? 'active' : '' ?>">
+                            <a href="arsip.php" aria-expanded="false">
+                                <span class="educate-icon educate-data-table icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Data Arsip</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="kategori.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Kategori</span></a>
+                        <li class="<?= $currentPage == 'kategori.php' ? 'active' : '' ?> <?= $currentPage == 'kategori_edit.php' ? 'active' : '' ?><?= $currentPage == 'kategori_tambah.php' ? 'active' : '' ?>">
+                            <a href="kategori.php" aria-expanded="false">
+                                <span class="educate-icon educate-course icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Data Kategori</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="riwayat.php" aria-expanded="false"><span class="educate-icon educate-form icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Riwayat Unduh</span></a>
+                        <li class="<?= $currentPage == 'gantipassword.php' ? 'active' : '' ?>">
+                            <a href="gantipassword.php" aria-expanded="false">
+                                <span class="educate-icon educate-danger icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Ganti Password</span>
+                            </a>
                         </li>
 
-
-                        <li>
-                            <a href="gantipassword.php" aria-expanded="false"><span class="educate-icon educate-danger icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Ganti Password</span></a>
+                        <li class="<?= $currentPage == 'riwayat.php' ? 'active' : '' ?>">
+                            <a href="riwayat.php" aria-expanded="false">
+                                <span class="educate-icon educate-form icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Riwayat Unduh</span>
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="logout.php" aria-expanded="false"><span class="educate-icon educate-pages icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Logout</span></a>
+                        <li class="<?= $currentPage == 'arsip_dihapus.php' ? 'active' : '' ?>">
+                            <a href="arsip_dihapus.php" aria-expanded="false">
+                                <span class="fa fa-trash-o fa-2x" style="padding-right: 12px;"></span>
+                                <span class="mini-click-non">Arsip Dihapus</span>
+                            </a>
                         </li>
 
+                        <li class="<?= $currentPage == 'logout.php' ? 'active' : '' ?>">
+                            <a href="logout.php" aria-expanded="false">
+                                <span class="educate-icon educate-pages icon-wrap sub-icon-mg"></span>
+                                <span class="mini-click-non">Logout</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
+
+                <style>
+                    .sidebar-nav .metismenu li.active a {
+                        background-color: #007bff;
+                        color: white;
+                    }
+
+                    .sidebar-nav .metismenu li.active a .icon-wrap {
+                        color: white;
+                    }
+
+                    .sidebar-nav .metismenu li a {
+                        display: flex;
+                        color: #333;
+                        background-color: transparent;
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .sidebar-nav .metismenu li a:hover {
+                        background-color: #f0f0f0;
+                        color: #007bff;
+                    }
+                </style>
+
             </div>
         </nav>
     </div>
@@ -217,12 +273,12 @@
                                         <li>
                                             <a href="admin.php" aria-expanded="false"><span class="educate-icon educate-course icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Admin</span></a>
                                         </li>
-                                        
+
                                         <li>
                                             <a href="petugas.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Operator</span></a>
                                         </li>
 
-                                        
+
                                         <li>
                                             <a href="user.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data User</span></a>
                                         </li>

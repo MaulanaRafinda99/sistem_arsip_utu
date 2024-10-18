@@ -27,14 +27,11 @@
 <div class="container-fluid">
 
 
+    <!-- Filter Data Arsip by Kategori -->
     <div class="panel">
-
         <div class="panel-body">
-
             <form method="get" action="">
-
                 <div class="row">
-
                     <div class="col-lg-4">
                         <div class="form-group">
                             <label>Filter Kategori</label>
@@ -51,18 +48,13 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="col-lg-4" style="margin-top: 7px;">
                         <br>
                         <input type="submit" class="btn btn-primary" value="Tampilkan">
                     </div>
-
                 </div>
-
             </form>
-
         </div>
-
     </div>
 
 
@@ -113,7 +105,7 @@
                             <td><?php echo $p['arsip_keterangan'] ?></td>
                             <td class="text-center">
                                     <a target="_blank" class="btn btn-primary" href="arsip_download.php?id=<?php echo $p['arsip_id']; ?>"><i class="fa fa-download"></i></a>
-                                    <a target="_blank" href="arsip_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i> Preview</a>
+                                    <a target="" href="arsip_preview.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-default"><i class="fa fa-search"></i> Preview</a>
                             </td>
                         </tr>
                         <?php 
