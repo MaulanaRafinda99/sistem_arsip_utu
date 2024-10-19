@@ -25,6 +25,44 @@
 </div>
 
 <div class="container-fluid">
+
+    <!-- Filter Data Arsip by Kategori -->
+    <div class="panel">
+        <div class="panel-body">
+            <form method="get" action="">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label>Filter by Kategori</label>
+                            <select class="form-control" name="kategori" required="required">
+                                <option value="">Pilih kategori</option>
+                                <?php
+                                $kategori = mysqli_query($koneksi, "SELECT * FROM kategori");
+                                while ($k = mysqli_fetch_array($kategori)) {
+                                ?>
+                                    <option <?php if (isset($_GET['kategori'])) {
+                                                if ($_GET['kategori'] == $k['kategori_id']) {
+                                                    echo "selected='selected'";
+                                                }
+                                            } ?> value="<?php echo $k['kategori_id']; ?>"><?php echo $k['kategori_nama']; ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" style="margin-top: 7px;">
+                        <br>
+                        <div class="d-flex flex-row">
+                            <a href="arsip.php" class="btn btn-default" style="margin-top: -0.5px; background-color:#F6F8FA;"><i class="fa fa-undo" style="color: #000;"></i></a>
+                            <input type="submit" class="btn btn-primary" value="Tampilkan">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="panel panel">
 
         <div class="panel-heading">
@@ -48,7 +86,12 @@
                     <?php
                     include '../koneksi.php';
                     $no = 1;
-                    $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_kategori=kategori_id AND arsip_petugas = petugas_id AND arsip_status IS NULL ORDER BY arsip_id DESC");
+                    if (isset($_GET['kategori'])) {
+                        $kategori = $_GET['kategori'];
+                        $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_petugas=petugas_id and arsip_kategori=kategori_id and arsip_kategori='$kategori' ORDER BY arsip_id DESC");
+                    } else {
+                        $arsip = mysqli_query($koneksi, "SELECT * FROM arsip,kategori,petugas WHERE arsip_petugas=petugas_id AND arsip_kategori=kategori_id AND arsip_status IS NULL ORDER BY arsip_id DESC");
+                    }
                     while ($p = mysqli_fetch_array($arsip)) {
                     ?>
                         <tr>
@@ -82,7 +125,7 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batalkan</button>
-                                                <a href="arsip_hapus.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-danger" style="color: #fff;" >Ya, Hapus <i class="fa fa-exclamation"></i></a>
+                                                <a href="arsip_hapus.php?id=<?php echo $p['arsip_id']; ?>" class="btn btn-danger" style="color: #fff;">Ya, Hapus <i class="fa fa-exclamation"></i></a>
                                             </div>
                                         </div>
                                     </div>
