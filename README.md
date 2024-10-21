@@ -33,7 +33,7 @@ Website ini dirancang untuk mengelola arsip secara efisien, aman, dan terstruktu
 ---
 
 ## 📌 **Panduan Penggunaan**  
-1. **Akses Website:** Kunjungi Website \\**https://arsip.utu.ac.id/**\\
+1. **Akses Website:** Kunjungi Website **https://arsip.utu.ac.id/**
 2. **Login:** Masukkan akun sesuai role.
 3. **Upload Dokumen:** Operator dapat mengunggah dokumen baru.  
 4. **Kelola Arsip:** Edit atau hapus dokumen berdasarkan hak akses.  
