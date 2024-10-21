@@ -30,6 +30,15 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
+<style>
+    .error-pagewrap {
+        background-image: url('assets/img/background/login.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+
 <body>
     <div class="error-pagewrap">
         <div class="error-page-int">
