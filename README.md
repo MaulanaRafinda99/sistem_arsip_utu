@@ -33,11 +33,12 @@ Website ini dirancang untuk mengelola arsip secara efisien, aman, dan terstruktu
 ---
 
 ## 📌 **Panduan Penggunaan**  
-1. **Login:** Masukkan akun sesuai role.  
-2. **Upload Dokumen:** Operator dapat mengunggah dokumen baru.  
-3. **Kelola Arsip:** Edit atau hapus dokumen berdasarkan hak akses.  
-4. **Pencarian:** Temukan dokumen berdasarkan judul atau kata kunci.  
-5. **Filter by Katagori:** Memudahkan dalam pencarian dokumen sesuai kategori dipilih.
+1. **Akses Website:** Kunjungi Website \\**https://arsip.utu.ac.id/**\\
+2. **Login:** Masukkan akun sesuai role.
+3. **Upload Dokumen:** Operator dapat mengunggah dokumen baru.  
+4. **Kelola Arsip:** Edit atau hapus dokumen berdasarkan hak akses.  
+5. **Pencarian:** Temukan dokumen berdasarkan judul atau kata kunci.  
+6. **Filter by Katagori:** Memudahkan dalam pencarian dokumen sesuai kategori dipilih.
 
 ---
 
